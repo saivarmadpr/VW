@@ -11,27 +11,39 @@
 </head>
 <body>
 
-  <!-- MATRIX RAIN CANVAS -->
-  <canvas id="matrix-canvas" class="matrix-canvas"></canvas>
+  <!-- GRADIENT ORB BACKGROUNDS -->
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
 
   <!-- LOADING SCREEN -->
   <div class="loader" id="loader">
     <div class="loader-inner">
-      <span class="loader-text">&gt; initializing_portfolio<span class="blink">_</span></span>
-      <div class="loader-bar-wrap">
-        <div class="loader-bar" id="loader-bar"></div>
+      <div class="loader-ring">
+        <svg viewBox="0 0 100 100">
+          <defs>
+            <linearGradient id="loader-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#010D6E" />
+              <stop offset="50%" stop-color="#0042AF" />
+              <stop offset="100%" stop-color="#2575f6" />
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="45" class="loader-ring-bg" />
+          <circle cx="50" cy="50" r="45" class="loader-ring-fill" id="loader-ring-fill" stroke="url(#loader-grad)" />
+        </svg>
+        <span class="loader-count" id="loader-count">0</span>
       </div>
-      <span class="loader-count" id="loader-count">0<span class="loader-pct">%</span></span>
+      <span class="loader-text">Loading Experience</span>
     </div>
   </div>
 
   <!-- ENTER SITE OVERLAY -->
   <div class="enter-overlay" id="enter-overlay">
     <div class="enter-inner">
-      <div class="terminal-prompt">&gt; access_granted</div>
-      <button class="enter-btn" id="enter-btn">
-        <span class="enter-bracket">[</span> Enter System <span class="enter-bracket">]</span>
-      </button>
+      <span class="enter-pre">PORTFOLIO READY</span>
+      <button class="enter-btn" id="enter-btn">Enter Experience</button>
     </div>
   </div>
 
@@ -80,21 +92,30 @@
   <!-- MAIN CONTENT -->
   <main id="main-content">
 
-    <!-- HERO SECTION -->
-    <section class="hero section" id="hero">
-      <div class="hero-subtitle">
-        <span class="mono">&gt; CYBERSECURITY ANALYST &amp; ENGINEER</span>
-      </div>
-      <div class="hero-titles">
-        <h1 class="hero-title-line">SAI VIDYA</h1>
-        <h1 class="hero-title-line outline">ELURU</h1>
-      </div>
-      <div class="hero-tagline">
-        <span class="typed-text" id="typed-text"></span><span class="typed-cursor">|</span>
-      </div>
-      <div class="hero-scroll">
-        <span>Scroll to Explore</span>
-        <div class="scroll-line"></div>
+    <!-- HERO — CINEMATIC WEBGL SCENE -->
+    <section class="hero-scene" id="hero">
+      <canvas id="scene-canvas" class="scene-canvas"></canvas>
+      <div class="hero-overlay" id="hero-overlay">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            <span>CYBERSECURITY ANALYST &amp; ENGINEER</span>
+            <span class="hero-badge-dot"></span>
+          </div>
+          <div class="hero-titles">
+            <h1 class="hero-line hero-line-1">SAI VIDYA</h1>
+            <h1 class="hero-line hero-line-2">ELURU</h1>
+          </div>
+          <div class="hero-tagline">
+            <p id="typed-text"></p><span class="cursor">|</span>
+          </div>
+        </div>
+        <div class="hero-scroll-hint">
+          <span>Scroll to Explore</span>
+          <div class="scroll-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
       </div>
     </section>
 
