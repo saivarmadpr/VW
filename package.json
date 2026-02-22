@@ -1,0 +1,29 @@
+{
+  "name": "vw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saivarmadpr/VW.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/saivarmadpr/VW/issues"
+  },
+  "homepage": "https://github.com/saivarmadpr/VW#readme",
+  "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
+    "gsap": "^3.14.2",
+    "lenis": "^1.3.17",
+    "vite": "^7.3.1"
+  }
+}

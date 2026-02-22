@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sai Vidya Eluru — Cybersecurity Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <!-- MATRIX RAIN CANVAS -->
+  <canvas id="matrix-canvas" class="matrix-canvas"></canvas>
+
+  <!-- LOADING SCREEN -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-text">&gt; initializing_portfolio<span class="blink">_</span></span>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loader-bar"></div>
+      </div>
+      <span class="loader-count" id="loader-count">0<span class="loader-pct">%</span></span>
+    </div>
+  </div>
+
+  <!-- ENTER SITE OVERLAY -->
+  <div class="enter-overlay" id="enter-overlay">
+    <div class="enter-inner">
+      <div class="terminal-prompt">&gt; access_granted</div>
+      <button class="enter-btn" id="enter-btn">
+        <span class="enter-bracket">[</span> Enter System <span class="enter-bracket">]</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- NOTE MODAL -->
+  <div class="note-modal" id="note-modal">
+    <div class="note-inner">
+      <button class="note-close" id="note-close">[X] Close</button>
+      <div class="note-content">
+        <p class="note-label">&gt; ABOUT_THIS_SITE</p>
+        <h3>From a Security Analyst's Terminal</h3>
+        <p>This portfolio is a personal project — an interactive journey through my cybersecurity career. Every section is designed to reflect the precision and depth that defines this field.</p>
+        <p>From securing cloud infrastructure to hunting threats in SIEM dashboards, I've built my career around one principle: defense is not a feature — it's the architecture.</p>
+        <p>If you take away one thing, let it be this:<br /><strong>Security isn't about building walls. It's about building awareness.</strong></p>
+        <p class="note-signature">— Sai Vidya Eluru</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="nav-left">
+      <button class="nav-note-btn" id="nav-note-btn">&gt; about_site</button>
+    </div>
+    <div class="nav-center">
+      <span class="nav-section-current" id="nav-current">00</span>
+      <span class="nav-divider">/ 06</span>
+    </div>
+    <div class="nav-right">
+      <span class="nav-quote mono">"Defense in depth, always."</span>
+    </div>
+  </nav>
+
+  <!-- INSIGHT DOTS -->
+  <div class="insight-dots" id="insight-dots">
+    <span class="insight-label">Sections</span>
+    <div class="dots-wrap">
+      <span class="dot" data-index="1">01</span>
+      <span class="dot" data-index="2">02</span>
+      <span class="dot" data-index="3">03</span>
+      <span class="dot" data-index="4">04</span>
+      <span class="dot" data-index="5">05</span>
+      <span class="dot" data-index="6">06</span>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- HERO SECTION -->
+    <section class="hero section" id="hero">
+      <div class="hero-subtitle">
+        <span class="mono">&gt; CYBERSECURITY ANALYST &amp; ENGINEER</span>
+      </div>
+      <div class="hero-titles">
+        <h1 class="hero-title-line">SAI VIDYA</h1>
+        <h1 class="hero-title-line outline">ELURU</h1>
+      </div>
+      <div class="hero-tagline">
+        <span class="typed-text" id="typed-text"></span><span class="typed-cursor">|</span>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll to Explore</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 01 — ABOUT -->
+    <section class="section section-01" id="section-01">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2 class="section-heading">
+          <span class="line">WHO I AM</span>
+        </h2>
+        <p class="section-intro">Cybersecurity professional pursuing an M.S. at Yeshiva University, with hands-on experience in secure architecture, threat analysis, and incident response across enterprise environments.</p>
+      </div>
+
+      <div class="section-content s01-content">
+        <div class="s01-left">
+          <div class="terminal-card">
+            <div class="terminal-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">sai@portfolio:~</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">$</span> cat mission.txt</p>
+              <p class="terminal-output">Securing digital infrastructure through proactive threat detection, robust access controls, and continuous security improvement.</p>
+              <p><span class="prompt">$</span> whoami</p>
+              <p class="terminal-output">Sai Vidya Eluru</p>
+              <p><span class="prompt">$</span> cat location.txt</p>
+              <p class="terminal-output">Jersey City, NJ</p>
+              <p><span class="prompt">$</span> echo $STATUS</p>
+              <p class="terminal-output">M.S. Cybersecurity — Yeshiva University (May 2026)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="s01-right">
+          <div class="stat-grid">
+            <div class="stat-card">
+              <span class="stat-value" data-count="50">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Code Reviews</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value" data-count="25">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Secure Deployments</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value" data-count="20">0</span><span class="stat-pct">%</span>
+              <span class="stat-label">Vuln Reduction</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value" data-count="5">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+          </div>
+
+          <div class="contact-strip">
+            <a href="mailto:eluruvidya@gmail.com" class="contact-link">eluruvidya@gmail.com</a>
+            <span class="contact-sep">|</span>
+            <span class="contact-link">(201) 920-6951</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02 — SKILLS -->
+    <section class="section section-02" id="section-02">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2 class="section-heading">
+          <span class="line">TECHNICAL</span>
+          <span class="line accent">ARSENAL</span>
+        </h2>
+      </div>
+
+      <div class="section-content s02-content">
+        <div class="skills-grid">
+          <div class="skill-category">
+            <div class="skill-cat-header">
+              <span class="skill-icon">🛡️</span>
+              <h4>Security Architecture & Frameworks</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">NIST Framework</span>
+              <span class="skill-tag">PKI (SSL/TLS)</span>
+              <span class="skill-tag">AES / RSA</span>
+              <span class="skill-tag">RBAC</span>
+              <span class="skill-tag">Least Privilege</span>
+              <span class="skill-tag">Secure Architecture</span>
+            </div>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-width="92"></div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-header">
+              <span class="skill-icon">🌐</span>
+              <h4>Networking & Infrastructure</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">TCP/IP</span>
+              <span class="skill-tag">DNS</span>
+              <span class="skill-tag">VPNs</span>
+              <span class="skill-tag">IDS/IPS</span>
+              <span class="skill-tag">Firewalls</span>
+              <span class="skill-tag">Nmap</span>
+              <span class="skill-tag">Wireshark</span>
+            </div>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-width="88"></div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-header">
+              <span class="skill-icon">📊</span>
+              <h4>SIEM & Threat Analysis</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Splunk</span>
+              <span class="skill-tag">ELK Stack</span>
+              <span class="skill-tag">Log Analysis</span>
+              <span class="skill-tag">Vuln Management</span>
+              <span class="skill-tag">Threat Detection</span>
+              <span class="skill-tag">Incident Response</span>
+            </div>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-width="85"></div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-header">
+              <span class="skill-icon">💻</span>
+              <h4>Programming & Tools</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Bash</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Linux (Kali/Ubuntu)</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">Postman</span>
+            </div>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-width="90"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03 — EXPERIENCE -->
+    <section class="section section-03" id="section-03">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2 class="section-heading">
+          <span class="line">EXPERIENCE</span>
+          <span class="line accent">& OPERATIONS</span>
+        </h2>
+      </div>
+
+      <div class="section-content s03-content">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">Aug 2025 — Present</div>
+            <div class="timeline-card">
+              <h4 class="timeline-role">IT Operations & Security Support Analyst</h4>
+              <p class="timeline-company">Yeshiva University — New York</p>
+              <ul class="timeline-details">
+                <li><span class="bullet-icon">›</span> Support university IT systems by resolving high-priority issues using a security-first approach to ensure data protection.</li>
+                <li><span class="bullet-icon">›</span> Manage access control and account management by enforcing least-privilege principles and RBAC to reduce unauthorized access risks.</li>
+                <li><span class="bullet-icon">›</span> Identify and escalate security incidents and misconfigurations while troubleshooting authentication and endpoint issues.</li>
+                <li><span class="bullet-icon">›</span> Handle sensitive user data in strict compliance with institutional security policies and confidentiality standards.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">Dec 2022 — Aug 2024</div>
+            <div class="timeline-card">
+              <h4 class="timeline-role">Secure Application Developer — Virgin Money</h4>
+              <p class="timeline-company">Virtusa — Chennai, India</p>
+              <ul class="timeline-details">
+                <li><span class="bullet-icon">›</span> Collaborated with 5+ teams to analyze business and security requirements, delivering 10+ enhancements using Agile practices.</li>
+                <li><span class="bullet-icon">›</span> Integrated security checks into CI/CD pipelines, contributing to a 20% reduction in post-deployment security issues.</li>
+                <li><span class="bullet-icon">›</span> Conducted unit and functional security testing across 25+ deployments to validate access controls and vulnerability fixes.</li>
+                <li><span class="bullet-icon">›</span> Performed peer reviews for 50+ code/config changes to ensure adherence to industry security standards and best practices.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 04 — PROJECTS -->
+    <section class="section section-04" id="section-04">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2 class="section-heading">
+          <span class="line">PROJECTS</span>
+          <span class="line accent">& RESEARCH</span>
+        </h2>
+      </div>
+
+      <div class="section-content s04-content">
+        <div class="projects-grid">
+          <div class="project-card featured">
+            <div class="project-status">
+              <span class="status-dot"></span> Featured Project
+            </div>
+            <h4 class="project-title">Cloud Security Posture & Misconfiguration Scanner</h4>
+            <p class="project-desc">Developed an AWS scanner to detect and prioritize high-risk misconfigurations and compliance gaps across cloud infrastructure.</p>
+            <div class="project-tech">
+              <span class="tech-tag">AWS</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">IAM</span>
+              <span class="tech-tag">Compliance</span>
+            </div>
+          </div>
+
+          <div class="project-card featured">
+            <div class="project-status">
+              <span class="status-dot"></span> Featured Project
+            </div>
+            <h4 class="project-title">Deception Platform & Honeypot Deployment</h4>
+            <p class="project-desc">Designed a deception framework to capture live attacker telemetry; implemented centralized log ingestion using ELK Stack.</p>
+            <div class="project-tech">
+              <span class="tech-tag">ELK Stack</span>
+              <span class="tech-tag">Honeypot</span>
+              <span class="tech-tag">Threat Intel</span>
+              <span class="tech-tag">Linux</span>
+            </div>
+          </div>
+
+          <div class="project-card achievement">
+            <div class="project-status">
+              <span class="status-dot gold"></span> Achievement
+            </div>
+            <h4 class="project-title">Hanukkah Hackathon Winner</h4>
+            <p class="project-desc">Showcased technical skills in a high-pressure Cyberbit environment to emerge as the winner among competing teams.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Cyberbit</span>
+              <span class="tech-tag">SOC Simulation</span>
+            </div>
+          </div>
+
+          <div class="project-card achievement">
+            <div class="project-status">
+              <span class="status-dot gold"></span> Achievement
+            </div>
+            <h4 class="project-title">CTF Competition — 3rd Place</h4>
+            <p class="project-desc">Secured third place demonstrating proficiency in web application exploitation, database attacks, and security challenges.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Web Exploitation</span>
+              <span class="tech-tag">SQL Injection</span>
+              <span class="tech-tag">CTF</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE SECTION -->
+    <div class="marquee-section" id="marquee-section">
+      <div class="marquee-track marquee-1">
+        <div class="marquee-content">
+          <span>NIST ◆ SPLUNK ◆ ELK STACK ◆ WIRESHARK ◆ NMAP ◆ KALI LINUX ◆ AWS ◆ PYTHON ◆ FIREWALLS ◆ IDS/IPS</span>
+          <span>NIST ◆ SPLUNK ◆ ELK STACK ◆ WIRESHARK ◆ NMAP ◆ KALI LINUX ◆ AWS ◆ PYTHON ◆ FIREWALLS ◆ IDS/IPS</span>
+          <span>NIST ◆ SPLUNK ◆ ELK STACK ◆ WIRESHARK ◆ NMAP ◆ KALI LINUX ◆ AWS ◆ PYTHON ◆ FIREWALLS ◆ IDS/IPS</span>
+        </div>
+      </div>
+      <div class="marquee-track marquee-2">
+        <div class="marquee-content reverse">
+          <span>THREAT DETECTION ◆ INCIDENT RESPONSE ◆ VULNERABILITY MANAGEMENT ◆ ACCESS CONTROL ◆ PKI ◆ RBAC</span>
+          <span>THREAT DETECTION ◆ INCIDENT RESPONSE ◆ VULNERABILITY MANAGEMENT ◆ ACCESS CONTROL ◆ PKI ◆ RBAC</span>
+          <span>THREAT DETECTION ◆ INCIDENT RESPONSE ◆ VULNERABILITY MANAGEMENT ◆ ACCESS CONTROL ◆ PKI ◆ RBAC</span>
+        </div>
+      </div>
+      <div class="marquee-track marquee-3">
+        <div class="marquee-content">
+          <span>SECURITY+ ◆ AWS CCP ◆ GOOGLE CYBERSECURITY ◆ MICROSOFT ANALYST ◆ ORACLE CERTIFIED ◆ COMPTIA</span>
+          <span>SECURITY+ ◆ AWS CCP ◆ GOOGLE CYBERSECURITY ◆ MICROSOFT ANALYST ◆ ORACLE CERTIFIED ◆ COMPTIA</span>
+          <span>SECURITY+ ◆ AWS CCP ◆ GOOGLE CYBERSECURITY ◆ MICROSOFT ANALYST ◆ ORACLE CERTIFIED ◆ COMPTIA</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 05 — CERTIFICATIONS & EDUCATION -->
+    <section class="section section-05" id="section-05">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <h2 class="section-heading">
+          <span class="line">CERTIFICATIONS</span>
+          <span class="line accent">& EDUCATION</span>
+        </h2>
+      </div>
+
+      <div class="section-content s05-content">
+        <div class="certs-grid">
+          <div class="cert-card">
+            <div class="cert-badge">S+</div>
+            <h4>CompTIA Security+</h4>
+            <p>Industry-standard security certification covering threats, vulnerabilities, and risk management.</p>
+          </div>
+          <div class="cert-card">
+            <div class="cert-badge gcp">GCP</div>
+            <h4>Google Cybersecurity Professional</h4>
+            <p>Comprehensive program on security operations, threat analysis, and SIEM tools.</p>
+          </div>
+          <div class="cert-card">
+            <div class="cert-badge aws">AWS</div>
+            <h4>AWS Cloud Practitioner</h4>
+            <p>Foundational cloud certification covering AWS architecture, security, and compliance.</p>
+          </div>
+          <div class="cert-card">
+            <div class="cert-badge ms">MS</div>
+            <h4>Microsoft Cybersecurity Analyst</h4>
+            <p>Professional certificate in Microsoft security tools, threat mitigation, and identity protection.</p>
+          </div>
+          <div class="cert-card">
+            <div class="cert-badge oca">OCA</div>
+            <h4>Oracle Certified Associate</h4>
+            <p>Oracle certification validating programming fundamentals and application development skills.</p>
+          </div>
+        </div>
+
+        <div class="education-blocks">
+          <div class="edu-card">
+            <div class="edu-year">2026</div>
+            <div class="edu-info">
+              <h4>Master of Science in Cybersecurity</h4>
+              <p class="edu-school">Yeshiva University, Katz School of Science and Health — New York, NY</p>
+              <p class="edu-courses">Architecture of Secure Operating Systems • Network/Data/Communication Security • Risk Management & Governance • Cybersecurity Audit</p>
+            </div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-year">2022</div>
+            <div class="edu-info">
+              <h4>B.Tech, Computer Science Engineering</h4>
+              <p class="edu-school">Sri Venkateshwara Engineering College — Tirupati, India</p>
+              <p class="edu-courses">Grade: 7.5 / 10</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 06 — CONNECT -->
+    <section class="section section-06" id="section-06">
+      <div class="section-header">
+        <span class="section-number">06</span>
+        <p class="section-pre">&gt; READY TO CONNECT?</p>
+        <h2 class="section-heading">
+          <span class="line">LET'S BUILD</span>
+          <span class="line accent">SOMETHING SECURE.</span>
+        </h2>
+        <p class="section-intro">Whether it's a security role, a collaboration, or just a conversation about the threat landscape — I'm always ready.</p>
+      </div>
+
+      <div class="section-content s06-content">
+        <div class="connect-grid">
+          <a href="mailto:eluruvidya@gmail.com" class="connect-card">
+            <span class="connect-icon">✉</span>
+            <h4>Email</h4>
+            <p>eluruvidya@gmail.com</p>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="connect-card">
+            <span class="connect-icon">in</span>
+            <h4>LinkedIn</h4>
+            <p>Professional Network</p>
+          </a>
+          <a href="https://github.com" target="_blank" class="connect-card">
+            <span class="connect-icon">&lt;/&gt;</span>
+            <h4>GitHub</h4>
+            <p>Code & Projects</p>
+          </a>
+          <div class="connect-card">
+            <span class="connect-icon">📍</span>
+            <h4>Location</h4>
+            <p>Jersey City, NJ 07304</p>
+          </div>
+        </div>
+
+        <div class="final-terminal">
+          <div class="terminal-header">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+            <span class="terminal-title">sai@portfolio ~ $</span>
+          </div>
+          <div class="terminal-body">
+            <p class="terminal-output typed-final" id="final-terminal-text"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+      <div class="footer-top">
+        <p>Cybersecurity portfolio crafted with precision. Built with the same attention to detail I bring to securing systems.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://linkedin.com" target="_blank">LINKEDIN</a>
+        <a href="https://github.com" target="_blank">GITHUB</a>
+        <a href="mailto:eluruvidya@gmail.com">EMAIL</a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 SAI VIDYA ELURU</span>
+        <span class="mono">&gt; all_rights_reserved</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
